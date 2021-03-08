@@ -1,0 +1,68 @@
+@import '~@angular/material/theming';
+@import '../../palette';
+.list-card-properties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+
+}
+.card-properties {
+  max-width: 40rem;
+  cursor: pointer;
+}
+
+.card-properties-type {
+  display: block;
+  font-size: 1.2rem;
+}
+.card-properties-address {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.card-properties-features{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card-properties-features-bedrooms{
+  display: flex;
+  align-items: center;
+}
+
+.card-properties-features-bedrooms-quantity{
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+
+.card-properties-features-area {
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.card-properties-price{
+  margin-top: 1rem;
+
+}
+
+.card-properties-price-rent{
+  display: inline-block;
+  font-size: 1.2rem;
+
+}
+
+.card-properties-price-total{
+  margin-top: 0.8rem;
+  font-weight: 900;
+  color:mat-color($itau-primary, 500) ;
+}
+
+.details-actions{
+  display: block;
+  text-transform: uppercase;
+}

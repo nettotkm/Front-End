@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="container" *ngIf=imovel>
+    <div class="imovel-detalhes">
+      <img src="{{ imovel.image }}" height=350 width=470 alt="apartamento">
+      <img src="{{ imovel.image }}" height=350 width=470 alt="apartamento">
+      <img src="{{ imovel.image }}" height=350 width=470 alt="apartamento">
+      <img src="{{ imovel.image }}" height=350 width=470 alt="apartamento">
+    </div>
+    <div>
+      <div class="properties-title">
+        {{imovel.title}}
+      </div>
+    </div>
+    <div class="properties-feature-address">
+      <span>
+        {{imovel.address}},
+      </span>
+      <span>
+        {{imovel.number}},
+      </span>
+      <span>
+        {{imovel.neighborhood}},
+      </span>
+      <span>
+        {{imovel.city}}
+      </span>
+    </div>
+    <div class="properties-features">
+      <span class="properties-features-bedrooms">
+        <mat-icon aria-hidden="false" aria-label="Quantidade Dormitórios">bed</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          {{imovel.bedrooms}} quartos
+        </span>
+        <span>
+          ({{imovel.suites}} suíte)
+        </span>
+      </span>
+      <span class="properties-features-details">
+        <mat-icon aria-hidden="false" aria-label="Quantidade de vaga">drive_eta</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          {{imovel.parkingSlots}} vaga
+        </span>
+      </span>
+      <span class="properties-features-details">
+        <mat-icon aria-hidden="false" aria-label="Quantidade de banheiro">bathroom</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          {{imovel.bathrooms}} banheiros
+        </span>
+      </span>
+      <span class="properties-features-details">
+        <mat-icon aria-hidden="false" aria-label="Quantidade de banheiro">pets</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          aceita pet
+        </span>
+      </span>
+      <span class="properties-features-details">
+        <mat-icon aria-hidden="false" aria-label="número do andar">apartment</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          {{imovel.floor}}&ordm; andar
+        </span>
+      </span>
+    </div>
+    <div class="properties-features">
+      <span class="properties-features-bedrooms">
+        <mat-icon aria-hidden="false" aria-label="número do andar">apartment</mat-icon>
+        <span class="properties-features-bedrooms-quantity" *ngIf="imovel.forRent">
+          aluguel
+        </span>
+      </span>
+
+      <span class class="properties-features-details" *ngIf="imovel.forSale">
+        <mat-icon aria-hidden="false" aria-label="Quantidade de vaga">apartment</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          {{imovel.parkingSlots}} vaga
+        </span>
+      </span>
+      <span class="properties-features-details" *ngIf="!imovel.hasElevator">
+        <mat-icon aria-hidden="false" aria-label="Quantidade de banheiro">apartment</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          sem elevavador
+        </span>
+      </span>
+      <span class="properties-features-details">
+        <mat-icon aria-hidden="false" aria-label="Quantidade de banheiro">architecture</mat-icon>
+        <span class="properties-features-bedrooms-quantity">
+          {{imovel.totalArea}} m²
+        </span>
+      </span>
+    </div>
+    <div>
+    </div>
+    <div class="properties-features-price">
+      <div class="properties-features-price-rent">
+        Aluguel {{imovel.rentValue | currency: 'BRL'}}
+      </div>
+      <div class="properties-features-price-condominiumValue">
+        <span>
+          Condomíno: {{imovel.condominiumValue | currency: 'BRL'}}
+        </span>
+      </div>
+      <div class="properties-features-price-total">
+        Total {{imovel.totalCost | currency: 'BRL'}}
+      </div>
+    </div>
+    <div class="properties-features-map">
+      <agm-map class="properties-features-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+    <div>
+      <a class="back-actions" routerLink="/" mat-raised-button color="primary">Voltar</a>
+    </div>
+  </div>
+</div>

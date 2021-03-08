@@ -1,0 +1,84 @@
+@import '~@angular/material/theming';
+@import '../../palette';s
+.container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.imovel-detalhes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.properties-title{
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-left: 5rem;
+
+}
+
+.properties-feature-address{
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+
+.properties-features{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+
+.properties-features-bedrooms{
+  display: flex;
+  align-items: center;
+}
+
+.properties-features-bedrooms-quantity{
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+
+.properties-features-details {
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.properties-features-price{
+  margin-top: 2rem;
+}
+
+.properties-features-price-rent{
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 5rem;
+}
+
+.properties-features-price-condominiumValue{
+  margin-left: 5rem;
+}
+
+.properties-features-price-total{
+  margin-top: 0.8rem;
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color:mat-color($itau-primary, 500) ;
+}
+
+.properties-features-map{
+  margin-top: 2rem;
+  display: block;
+}
+.back-actions{
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+}
+
+agm-map {
+  height: 350px;
+}

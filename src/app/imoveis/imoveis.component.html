@@ -1,0 +1,49 @@
+<div class="list-card-properties">
+  <div *ngFor="let imovel of imoveis$; index as i">
+    <mat-card routerLink="/imoveis/{{i}}" class="card-properties">
+      <img mat-card-image src="{{ imovel.image }}" alt="apartamento">
+      <mat-card-content class="lista">
+        <div>
+          <span class="card-properties-type">
+            {{imovel.type}}
+          </span>
+          <span class="card-properties-address">
+            {{imovel.address}}
+          </span>
+        </div>
+        <div class="card-properties-neighborhood">
+          <span>
+            {{imovel.neighborhood}},
+          </span>
+          <span>
+            {{imovel.city}}
+          </span>
+        </div>
+        <div class="card-properties-features">
+          <span class="card-properties-features-bedrooms">
+            <mat-icon aria-hidden="false" aria-label="Qtde Dormitórios">bed</mat-icon>
+            <span class="card-properties-features-bedrooms-quantity">
+              {{imovel.bedrooms}}
+            </span>
+          </span>
+          <span class="card-properties-features-area">
+            <mat-icon aria-hidden="false" aria-label="Metragem">architecture</mat-icon>
+            {{imovel.totalArea}} m²
+          </span>
+
+        </div>
+        <div class="card-properties-price">
+          <div class="card-properties-price-rent">
+            Aluguel {{imovel.rentValue | currency: 'BRL'}}
+          </div>
+          <div class="card-properties-price-total">
+            Total {{imovel.totalCost | currency: 'BRL'}}
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <a class="details-actions" routerLink="/imoveis/{{i}}" mat-raised-button color="primary">ver detalhes</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
