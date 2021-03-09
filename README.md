@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-First npm install -g json-server and run the comand `json-server imoveis.json` for api run in `http://localhost:3000/data`.
+First `npm install -g json-server` and run the comand `json-server imoveis.json` for api run in `http://localhost:3000/data`.
 
 Second run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
