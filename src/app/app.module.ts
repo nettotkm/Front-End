@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ImoveisComponent } from './imoveis/imoveis.component';
 import { ImovelComponent } from './imovel/imovel.component';
 import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 import { MenuService } from './menu/menu.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,7 +29,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AgmCoreModule } from '@agm/core';
-import { FooterComponent } from './footer/footer.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { FooterComponent } from './footer/footer.component';
     }),
     FormsModule,
     ReactiveFormsModule,
+    FlexLayoutModule
   ],
   providers: [MenuService, HttpClientModule],
   bootstrap: [AppComponent],

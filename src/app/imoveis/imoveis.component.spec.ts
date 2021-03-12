@@ -4,11 +4,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MenuService } from './../menu/menu.service';
 import { ApiService } from './../api.service';
 import { ImoveisComponent } from './imoveis.component';
+import { Imovel } from '../../model/imovel';
+import { By } from '@angular/platform-browser';
+
+
 
 describe('ImoveisComponent', () => {
   let component: ImoveisComponent;
   let fixture: ComponentFixture<ImoveisComponent>;
-
+  let imovel: Imovel
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
@@ -25,7 +29,19 @@ describe('ImoveisComponent', () => {
     fixture.detectChanges();
   });
 
+  beforeEach(() => {
+    imovel = new Imovel;
+    imovel.city = 'São Paulo'
+
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should filter Imovel', () => {
+    expect(component.filterImovel(imovel,'sao paulo')).toBeTruthy();
+    expect(component.filterImovel(imovel,'so paulo')).toBeFalsy();
+  });
+
 });

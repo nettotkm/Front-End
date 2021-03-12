@@ -1,77 +1,133 @@
 @import '~@angular/material/theming';
-@import '../../palette';s
-.container {
+@import '../../palette';
+.properties-container {
   margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-
 }
 
 .properties-details {
   display: flex;
-  justify-content: space-around;
+  margin-top: 5rem;
 }
+
+.properties-breadcrumb{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-top: 1.6rem;
+}
+
+.button-actions > a:hover{
+  text-decoration:none;
+}
+
+.photos-actions{
+  margin-top: 1.4rem;
+  text-transform: uppercase;
+
+}
+
+.map-actions{
+
+  margin-top: 2rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+
+.properties-breadcrumb > * + *{
+  margin-left: 0.5rem;
+}
+
+// .properties-breadcrumb-item{
+// margin-top: 3rem;}
 
 .properties-title{
   font-size: 2.5rem;
   font-weight: 900;
-  margin-top: 1rem;
-  margin-left: 5rem;
-
+  margin-top: 1.8rem;
+  line-height: 3rem;
 }
 
 .properties-feature-address{
-  margin-top: 1rem;
-  margin-left: 5rem;
+  margin-top: 0.4rem;
+
+}
+
+.properties{
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 55rem;
 }
 
 .properties-features{
-  display: flex;
-  align-items: center;
   margin-top: 1rem;
-  margin-left: 5rem;
+  margin-right: 2rem
 }
-
+ .icon{
+  color:mat-color($itau-primary, 500)
+ }
 .properties-features-bedrooms{
   display: flex;
   align-items: center;
 }
 
-.properties-features-bedrooms-quantity{
+.properties-features-quantity{
   display: inline-block;
   margin-left: 0.8rem;
 }
 
+.properties-features-suite{
+  margin-left: 0.5rem
+}
+
 .properties-features-details {
   display: flex;
-  margin-left: 2rem;
   align-items: center;
 }
 
 .properties-features-price{
-  margin-top: 2rem;
+  margin-top: 3.2rem;
+  max-width: 50rem;
+  margin-bottom: 3.2rem;
 }
 
 .properties-features-price-rent{
-  display: inline-block;
-  font-size: 2rem;
-  margin-left: 5rem;
+  // display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
 }
 
-.properties-features-price-condominiumValue{
-  margin-left: 5rem;
+.properties-features-price-rent-details{
+  font-weight: 900;
+
 }
 
-.properties-features-price-total{
+.properties-features-price-condominium{
   margin-top: 0.8rem;
-  margin-left: 5rem;
-  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.properties-features-price-border{
+  margin-top: 1rem;
+  border: 1px dashed mat-color($itau-primary, 500) ;
+}
+.properties-features-price-total{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
   font-weight: 900;
   color:mat-color($itau-primary, 500) ;
 }
 
 .properties-features-map{
-  margin-top: 2rem;
+  // margin-top: 2rem;
   display: block;
 }
 .back-actions{

@@ -2,6 +2,7 @@ import { Imovel } from './../../model/imovel';
 import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { MenuService } from '../menu/menu.service';
+import { transliterate as tr} from 'transliteration';
 
 @Component({
   selector: 'app-imoveis',
@@ -14,6 +15,7 @@ export class ImoveisComponent implements OnInit {
   imoveis$: Imovel[] = [];
   cidade: string;
   search: string;
+
   constructor(private _api: ApiService, private menu: MenuService) {}
 
   ngOnInit() {
@@ -25,9 +27,15 @@ export class ImoveisComponent implements OnInit {
       this.search = search;
       this._api.getImoveis().subscribe((data) => {
         this.imoveis$ = data.filter((imovel) => {
-          return imovel.city.toLowerCase().includes(this.search.toLowerCase());
+          return this.filterImovel(imovel,this.search)
         });
       });
     });
   }
+
+  filterImovel(imovel,search){
+    return tr(imovel.city.toLowerCase()).includes(tr(search.toLowerCase()));
+
+  }
+
 }

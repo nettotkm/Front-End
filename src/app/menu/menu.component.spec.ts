@@ -7,6 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { MenuService } from './../menu/menu.service';
 import { ApiService } from './../api.service';
 import { MenuComponent } from './menu.component';
@@ -28,6 +29,7 @@ describe('MenuComponent', () => {
           MatSidenavModule,
           MatToolbarModule,
           HttpClientTestingModule,
+          RouterTestingModule
         ],
         providers: [MenuService, ApiService],
       }).compileComponents();

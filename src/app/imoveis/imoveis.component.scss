@@ -1,13 +1,27 @@
 @import '~@angular/material/theming';
 @import '../../palette';
 .list-card-properties {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   margin-top: 5rem;
+  margin-bottom: 3.2rem;
+}
 
+.list-card{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .card-properties {
+  display: flex;
+  flex-direction: column;
+  min-height: 43rem;
+  @media screen and (max-width:992px) {
+    margin-top: 3.2rem;
+  }
+  @media screen and (max-width:575px) {
+    margin-left: auto;
+    margin-right: auto;
+      }
+
   max-width: 40rem;
   cursor: pointer;
 }
@@ -34,6 +48,10 @@
   align-items: center;
 }
 
+.icon{
+  color:mat-color($itau-primary, 500)
+ }
+
 .card-properties-features-bedrooms-quantity{
   display: inline-block;
   margin-left: 0.8rem;
@@ -46,7 +64,7 @@
 }
 
 .card-properties-price{
-  margin-top: 1rem;
+  margin-top: auto;
 
 }
 
@@ -63,6 +81,10 @@
 }
 
 .details-actions{
-  display: block;
-  text-transform: uppercase;
+  padding: 0;
+  margin-top: 1rem;
+  a{
+    display: block;
+    text-transform: uppercase;
+  }
 }

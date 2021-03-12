@@ -1,12 +1,29 @@
 
 .toolbar{
   display: flex;
+  position: relative;
   width: 100%;
   justify-content: space-between;
   height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .logo {
   width: 5rem;
   height: 5rem;
+}
+
+.title{
+  position: absolute;
+  font-size: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  @media screen and (max-width:992px) {
+    display:none
+  }
+}
+
+.search-input::-webkit-input-placeholder{
+  font-size: 0.5rem;
 }

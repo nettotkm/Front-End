@@ -1,3 +1,10 @@
-footer {
+@import '~@angular/material/theming';
+@import '../../palette';
+.footer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  padding: 2rem   1rem;
+  background-color: mat-color($itau-primary, 200)
+
 }

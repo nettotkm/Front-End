@@ -1,7 +1,7 @@
 <mat-toolbar class="toolbar" color="primary">
   <img class="logo" src="../../assets/images/logo_itau.png" alt="logo itau">
-  <span>Lista de Imóveis</span>
-  <div>
+  <span class="title">Itaú Imóveis</span>
+  <div *ngIf="routeUrl == 'Home'">
     <mat-form-field>
       <input matInput type="search" [formControl]="queryField" placeholder="Buscar por cidade" class="search-input"
         (input)="inputChange()">

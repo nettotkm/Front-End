@@ -18,6 +18,7 @@ export class ImovelComponent implements OnInit {
   lat: number;
   lng: number;
   zoom: number = 12;
+  control: string = 'photos';
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -27,12 +28,17 @@ export class ImovelComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    console.log(this.router.url);
     const id = this.route.snapshot.paramMap.get('id');
     this._api.getImoveis().subscribe((data) => {
       this.imovel = data[id];
       this.lat = data[id].lat;
       this.lng = data[id].lng;
     });
+
+  }
+  onClick(control: string){
+    this.control = control
 
   }
 }
